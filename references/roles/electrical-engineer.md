@@ -17,18 +17,21 @@ Classic boundary: **mechanical** specifies the motor (power, torque, hazardous-a
 ## Key responsibilities
 
 - **Load list / power balance** and network coordination (point of supply, metering, power quality).
-- **SLD** (Single Line Diagram) — HV/MV/LV architecture, busbars, back-up.
+- **SLD** (Single Line Diagram) — HV/MV/LV architecture, electrical redundancy n-1 for transformers, busbars, back-up.
 - **Cable sizing** — rating, voltage drop, short-circuit withstand.
 - **Discrimination and protections** — relay settings (50/51, differential, distance), current / time / logic discrimination.
 - **Short-circuit and arc-flash studies** — IEC 60909 or IEEE/ANSI methods, IEEE 1584, panel labelling.
 - **Earthing** — earth grid, equipotential bonding, lightning protection.
 - **Secured distribution** — UPS, generator sets, DC batteries.
 - **Lighting** (Dialux), **hazardous areas** (zoning or Class/Division, Ex equipment), **motors** (starting, protection), **electrical tracing**.
+- **variable frequency drive** or other regime of operation (may be part of starting method as well)
+- ensures **clean** cable trays and prevents dust accumulation were relevant (dirt and ATEX risk)
+- **cable labeling** minimum on both ends and up to date relining especially during construction and commissioning (better a right red lining as a beautiful wrong black one)
 
 ## Anchor figures
 
-- **Voltage levels**: names and thresholds are set by the country's regime (e.g. EU practice: LV < 1 kV (230/400 V), MV 1–50 kV with 5.5 / 6.6 / 11 / 20 kV common, HV > 50 kV; US: 480 V / 4.16 kV / 13.8 kV, 60 Hz; Japan 50 / 60 Hz split). Frequency and standard voltages are the first thing to check on a foreign project.
-- **Voltage drop**: typically ≤ 3% lighting, ≤ 5% other uses (IEC 60364 / national wiring rules), from the origin. **Motor starting dip** ≤ ~10-15% at the terminals (otherwise the motor stalls / the contactor drops out).
+- **Voltage levels**: names and thresholds are set by the country's regime (e.g. EU practice: LV < 1 kV (230/400 V/690V), MV 1–50 kV with 5.5 / 6.6 / 11 / 20 kV common, HV > 50 kV; US: 480 V / 4.16 kV / 13.8 kV, 60 Hz; Japan 50 / 60 Hz split). Frequency and standard voltages are the first thing to check on a foreign project.
+- **Voltage drop**: typically ≤ 3% lighting, ≤ 5% [TZ1]other uses (IEC 60364 / national wiring rules), from the origin. **Motor starting dip** ≤ ~10-15% at the terminals (otherwise the motor stalls / the contactor drops out).
 - **Cable sizing chain**: **Ib ≤ In ≤ Iz** (design current ≤ protection rating ≤ cable current-carrying capacity), and **I₂ ≤ 1.45 Iz**.
 - **Cable derating**: grouping factors, ambient temperature (ref 30 °C air / 20 °C ground), soil resistivity and burial depth — a cable "fine on the catalogue" can be undersized in a tight bundle.
 - **Thermal short-circuit withstand**: **k²S² ≥ I²t** (k ≈ 115 PVC Cu, 143 XLPE Cu).
@@ -36,6 +39,7 @@ Classic boundary: **mechanical** specifies the motor (power, torque, hazardous-a
 - **Motor starting**: DOL ~6-7× In; star-delta ~2-3×; soft-start ~3-4×; **VFD ~1-1.5×**.
 - **Power factor**: aim for cos φ ≥ ~0.93 (tan φ ≤ 0.4) to avoid reactive-energy penalties (utility tariff dependent).
 - **Arc flash**: incident energy in cal/cm² → PPE category; **> 40 cal/cm² = no live work** (zone to be flagged).
+- **separate cable trays** for voltages (24 VDC / field instrumentation; LV; MV; HV)
 
 ## How to read an SLD (the grid)
 
@@ -43,7 +47,7 @@ The single line diagram is the network's identity card. Read it in this order:
 
 1. **Sources and incomers**: point of supply, transformers (rating, **Uk**, vector group), generators, UPS, DC batteries — and the **redundancy** (single/double busbar, bus coupler, back-up).
 2. **Short-circuit levels** at each busbar: are they indicated? consistent with upstream?
-3. **Breaking capacity of the equipment vs Isc** at the point considered: **does the breaker clear the fault?** Thermal/dynamic withstand of the busbars. *Check no. 1.*
+3. **Breaking capacity of the equipment vs Isc** at the point considered: **does the breaker clear the fault?** Thermal/dynamic withstand of the busbars. *Check no. 1.* 
 4. **Protections and their grading**: relays present (50/51, 87, 27/59, 49…), settings, downstream discrimination.
 5. **Earthing system per voltage level**: TN/TT/IT in LV (IEC), solidly / resistance / impedance earthed neutral in MV — consistent with the protections retained.
 6. **Critical loads** on secured/UPS supply? Load shedding planned?
@@ -76,6 +80,44 @@ Controlled installation, low loop impedances?                → TN-S
 ## Sector-specific
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Electrical engineer". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
+
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/electrical_engineer.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/extraction.md`
+- `references/concepts/purification.md`
+- `references/concepts/filtration.md`
+- `references/concepts/ion-exchange-and-chromatography.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/automation-and-control.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
 
 ## Red flags — the hunt
 
@@ -164,3 +206,5 @@ Rigorous, attached to the regulations. Particularly vigilant about the safety of
 - **cos φ and the auxiliaries' consumption weigh on OPEX**: a poor power factor is paid every month (reactive penalties, oversizing).
 - **Network decoupling and interface protections are imposed by the operator**, not by the designer: compliance is non-negotiable.
 - **Multi-country reflex**: installation code, voltage levels and frequency, hazardous-area system (Zone vs Class/Division), interface protections and grid code all change with the country — see `countries/multi-country.md` and `standards-regimes.md`.
+
+[TZ1]I learned 3 is established standard (no norm or formal regulation) r all applications. Low energy consumption goes down to 1% (larger cable)

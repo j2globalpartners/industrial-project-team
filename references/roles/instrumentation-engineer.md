@@ -18,8 +18,8 @@ Specify, procure and have installed the field instruments: sensors (pressure, te
 
 - **Sensor selection** — measurement principle suited to the fluid, range, accuracy, conditions (P, T, vibration, corrosivity).
 - **ISA-20 datasheets**, MR, TBE.
-- **Control valves** — Cv/Kv sizing, internals, noise, cavitation, fail position.
-- **ESD / SDV valves** — actuator, fail-safe, closing speed, SIL certification if SIS.
+- **Control valves** — Cv/Kv sizing, valve type (butterfly valve, gate valve, ball valve) under process considerations (sticky, degassing, expansions), internals, noise, cavitation, fail position.
+- **ESD / SDV valves** — actuator, fail-safe, closing speed, SIL / PL certification if SIS.
 - **Hook-ups, loop diagrams, cabling and JBs** (IS / non-IS segregation).
 - **Calibration and commissioning** — shop pre-calibration, loop check, wet calibration.
 - **SIS integration** — SIL-certified sensors and valves, PFDavg calculation of the SIF.
@@ -27,16 +27,19 @@ Specify, procure and have installed the field instruments: sensors (pressure, te
 ## Instrument types
 
 ### Measurement
-- **Pressure**: piezoresistive/capacitive transmitters (Rosemount 3051, Yokogawa EJX, E+H).
+- **Pressure**: piezoresistive/capacitive transmitters (Rosemount 3051, Yokogawa EJX, E+H, Vega).
 - **Temperature**: RTD Pt100 (accuracy), K/J/T thermocouple (high T / robustness), with thermowell.
 - **Level**: guided-wave radar (GWR) / free-space radar (modern reference), hydrostatic DP, capacitive, ultrasonic.
-- **Flow**: Coriolis (mass, accurate), vortex (steam/gas), magnetic (conductive liquids), DP + primary element (orifice/venturi), ultrasonic, turbine.
+- **Flow**: Coriolis (mass, accurate, expensive), vortex (steam/gas), magnetic (conductive liquids), DP + primary element (orifice/venturi), ultrasonic, turbine, temporarily clamp on ultrasonic (commissioning).
 - **Analysers**: pH, conductivity, O₂, H₂S, hydrocarbons (FID, NDIR), online gas chromatograph (GC).
 
 ### Actuators
 - **Control valves**: globe, butterfly, cage, eccentric ball — body per service.
 - **ESD/SDV valves**: full-bore ball, spring-return actuator.
 - **Smart HART positioners** (SIS and fine control).
+- **actuator type** pneumatic, hydraulic (expensive due to external hydraulic station but necessary for large power), electrical
+- **bypass lines** for control valves were product allows it, mandatory for large valves and high pressure differences (small pilot valve, manual or actuated depending on frequency of use)
+- **condensate trap** upstream of control valves to prevent erosion from liquid
 
 ## Anchor figures
 
@@ -47,7 +50,8 @@ Specify, procure and have installed the field instruments: sensors (pressure, te
 - **Control valve**: opening **20-80%** (normal ~50-70%), **authority N = ΔP_valve / ΔP_system ≥ 0.3** (ideal 0.5), globe rangeability ~30-50:1.
 - **Noise**: > **85 dB(A) at 1 m** → low-noise trim or downstream treatment.
 - **Thermowell**: check the **wake frequency (ASME PTC 19.3 TW)** vs natural frequency — otherwise resonance and thermowell failure in the line.
-- **SIL (low demand, IEC 61511)**: SIL1 PFDavg 10⁻¹-10⁻² (RRF 10-100), SIL2 10⁻²-10⁻³, SIL3 10⁻³-10⁻⁴.
+- **straight run** before and after flow meters (usually 5-10 x DN upstream and 3-5 x DN downstream)
+- **SIL (low demand, IEC 61511)**: SIL1 PFDavg 10⁻¹-10⁻² (RRF 10-100), SIL2 10⁻²-10⁻³, SIL3 10⁻³-10⁻⁴; Performance Level PL EN ISO 13849 for high and continuous demand
 
 ## How to size / check a control valve (the expert grid)
 
@@ -94,6 +98,46 @@ A SIF (safety instrumented function) = sensor(s) + logic + final element, whose 
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Instrumentation engineer". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/instrumentation_engineer.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/extraction.md`
+- `references/concepts/purification.md`
+- `references/concepts/filtration.md`
+- `references/concepts/ion-exchange-and-chromatography.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/balances.md`
+- `references/concepts/analytics.md`
+- `references/concepts/automation-and-control.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
+
 ## Red flags — the hunt
 
 - **Oversized control valve** (controlling < 10-20% opening) → instability, wear. *The most frequent.*
@@ -107,6 +151,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **Uncertified SIS sensor**, PFDavg not meeting the target, or unrealistic proof test.
 - **Same sensor for control and safety** → common cause.
 - **IS / non-IS segregation violated**; impulse lines not drainable/ventable → calibration impossible, freezing.
+- **protection** especially of control valves and flow meters until system is flushed and cleaned
 
 ## Vocabulary and acronyms
 
@@ -115,7 +160,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **IS / non-IS** — intrinsic safety (Zener barriers)
 - **HART / 4-20 mA / NAMUR NE43** — signal and status signalling
 - **Fail open / close / last** — valve position on loss of air/signal
-- **SIF / SIL / PFDavg / RRF** — safety function and level, probability of failure, risk reduction factor
+- **SIF / SIL / PL / PFDavg / RRF** — safety function and level, probability of failure, risk reduction factor
 - **1oo1 / 1oo2 / 2oo3** — voting architectures; **HFT / SFF** — fault tolerance / safe failure fraction
 - **MTBF / MTTR**; **JB / MJB** — Junction Box
 - **AMS** — Asset Management System (HART diagnostics); **NAMUR NE 43 / NE 107 / NE 21**
@@ -141,12 +186,13 @@ What changes for this role depending on the project's sector lives in the **acti
 - **"SIL sensor, SIL valve? PFDavg met?"**
 - **"Cavitation / noise downstream of the valve?"**
 - **"Drains/vents for wet calibration?"**
+- **accessible** readings in the plant are a great plus for operators and commissioning
 
 ## Typical internal interfaces
 
 - With **process**: conditions, fluid, range, accuracy, fail position, control philosophy.
 - With **DCS**: I/O list, signals, tags, loop types, fail positions.
-- With **piping**: P/T tappings, valve positions, maintenance access.
+- With **piping**: P/T tappings, valve positions, maintenance access, installation order (insulation crew steps on instrumentation, instrumentation crew steps on insulation).
 - With **mechanical**: sensors mounted on equipment (vibration, bearing T).
 - With **electrical**: analyser/cabinet supplies, hazardous-area classification.
 - With **HSE / safety**: SIL determination, LOPA, F&G sensors.
@@ -174,3 +220,4 @@ Pragmatic, attentive to detail, loves a well-filled datasheet. Wary of "miracle"
 - **SIFs rest on the instruments.** A poorly chosen over/under-pressure transmitter on a vessel compromises safety: consistency with technical safety and the SIL.
 - **Maintainability comes first in operation**: an instrument inaccessible or uncalibratable without shutdown = unavailability = lost production.
 - **Multi-country reflex**: hazardous-area system (Zone vs Class/Division), legal metrology and the network operator's metering and telemetry requirements vary — see `countries/multi-country.md` and `standards-regimes.md`.
+

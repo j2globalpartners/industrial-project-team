@@ -8,7 +8,7 @@ Design the control system architecture: **DCS** for the process, **SIS** for fun
 
 | | DCS | Instrumentation | Electrical | Process |
 |---|---|---|---|---|
-| Object | The **logic, HMI, sequences** | The **sensor / final element** | The **power** | **What** to control / interlock |
+| Object | The **logic, HMI, sequences** | The **sensor / actor / final element** | The **power** | **What** to control / interlock |
 | Question | "How do I control, alarm, interlock?" | "Which technology, which signal?" | "How do I supply?" | "Which control strategy?" |
 | Deliverable | Architecture, C&E, narratives, HMI | Index, datasheets, loops | SLD, MCC signals | Control philosophy |
 
@@ -20,7 +20,7 @@ Design the control system architecture: **DCS** for the process, **SIS** for fun
 - **Control loops** — PID, cascade, ratio, feedforward, override, anti-windup.
 - **Sequential logic** — start-ups, shutdowns, batch (ISA-88).
 - **Alarms and HMI** — philosophy (EEMUA 191 / ISA-18.2), rationalisation, operator displays (ISA-101).
-- **SIS** — physically separated from the DCS, SIL-certified (IEC 61511); C&E, bypasses, proof tests.
+- **SIS** — physically separated from the DCS, SIL-certified (IEC 61511), Performance Level EN ISO 13849; C&E, bypasses, proof tests.
 - **F&G** — fire/gas detection, ESD trip, sirens/beacons, isolation valves.
 - **OT cybersecurity** — IEC 62443, segmentation, hardening, accounts, patches.
 - **FAT, SIT, SAT, commissioning** — factory acceptance, integration, start-up with operators.
@@ -44,7 +44,7 @@ The **SIS is physically separated from the DCS** (different controllers, sometim
 ## Anchor figures
 
 - **Alarm KPIs (EEMUA 191 / ISA-18.2)**: steady state **≤ 1 alarm / 10 min** per operator (~150/day); after a major upset **≤ 10 alarms / 10 min**; target priority distribution **~80% low / 15% medium / 5% high**; stale alarms (> 24 h) and chattering alarms ≈ 0.
-- **SIL (IEC 61511, low demand)**: SIL1 PFDavg 10⁻¹-10⁻² (RRF 10-100), SIL2 10⁻²-10⁻³, SIL3 10⁻³-10⁻⁴.
+- **SIL (IEC 61511, low demand)**: SIL1 PFDavg 10⁻¹-10⁻² (RRF 10-100), SIL2 10⁻²-10⁻³, SIL3 10⁻³-10⁻⁴. PL a to e, either low or high demand . Hard-wired instead of SIS as equivalent option
 - **Availability** of a critical process: aim for ≥ 99.9% → **redundant** controllers, networks and power supplies.
 - **SOE** (Sequence Of Events / first-out): ~1 ms resolution — indispensable to diagnose a trip.
 - **Spare I/O**: ~20% of I/O and cabinet space **free at acceptance** (contractual expandability).
@@ -54,7 +54,7 @@ The **SIS is physically separated from the DCS** (different controllers, sometim
 
 The C&E is the king artefact of the SIS/F&G: it says *which cause triggers which action*. Check it line by line:
 
-1. **Each cause (initiator)** has a trip threshold, a **vote** (1oo2, 2oo3…) and a **SIL** from the LOPA.
+1. **Each cause (initiator)** has a trip threshold, a **vote** (1oo2, 2oo3…) and a **SIL** from the LOPA or similar procedure.
 2. **Each effect (action)** is defined with its **fail position** and its dedicated final element.
 3. **Completeness**: every HAZOP/LOPA scenario requiring a SIF is represented; no orphan cause nor effect without cause.
 4. **P&ID / safeguarding philosophy consistency**: the C&E tags exist and match.
@@ -92,6 +92,46 @@ The SIS and the DCS share neither sensor, nor controller, nor final element with
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "DCS / control systems engineer". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/dcs_engineer.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/extraction.md`
+- `references/concepts/purification.md`
+- `references/concepts/filtration.md`
+- `references/concepts/ion-exchange-and-chromatography.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/balances.md`
+- `references/concepts/analytics.md`
+- `references/concepts/automation-and-control.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
+
 ## Red flags — the hunt
 
 - **Alarm flood / stale / chattering alarms** → drowned operator, inoperability.
@@ -110,16 +150,17 @@ What changes for this role depending on the project's sector lives in the **acti
 ## Vocabulary and acronyms
 
 - **DCS** — Distributed Control System (Honeywell Experion, Yokogawa CENTUM, Emerson DeltaV, ABB 800xA, Siemens PCS 7)
-- **SIS** — Safety Instrumented System (Triconex, HIMA, Honeywell SM, Siemens S7-400F)
+- **SIS** — Safety Instrumented System (Triconex, HIMA, Honeywell SM, Siemens S7-400F / S7-1500F)
 - **PLC** — Programmable Logic Controller (packages); **SCADA** — supervision (smaller sites)
 - **F&G / ESD** — Fire & Gas / Emergency Shut Down; **LEL** — Lower Explosive Limit
-- **SIF / SIL / PFDavg / RRF / IPL** — safety function / level / probability of failure / risk reduction factor / independent protection layer
+- **SIF / SIL / PL / PFDavg / RRF / IPL** — safety function / level / probability of failure / risk reduction factor / independent protection layer
 - **1oo1 / 1oo2 / 2oo3** — voting architectures
 - **C&E** — Cause and Effect matrix; **SOE** — Sequence Of Events (first-out)
 - **MOC** — Management Of Change; **Historian** (IP.21, OSIsoft PI)
 - **OPC UA / DA** — standard exchange; **MES** — Manufacturing Execution System
 - **SL1-4** — IEC 62443 security levels (zones & conduits)
 - **Modbus / HART / Profibus / FF / Profinet / EtherNet/IP** — fieldbuses
+- **LOPA** layer of protection analysis, **HAZOP / HAZID** Hazard and operability Study / Hazard identification study
 
 ## Deliverables owned
 
@@ -127,14 +168,14 @@ What changes for this role depending on the project's sector lives in the **acti
 - Control narratives (functional description of the loops)
 - Cause and Effect (SIS / F&G); alarm rationalisation document
 - Sequential logic (SFC / GRAFCET); HMI specs (ISA-101)
-- SIL verification report (LOPA + SIF calculation); cyber risk assessment (IEC 62443)
+- SIL/PL verification report (LOPA + SIF calculation); cyber risk assessment (IEC 62443)
 - FAT / SAT procedures and reports
 
 ## Reflexes / obsessions
 
 - **"Which alarm philosophy?"** — a panel flashing continuously = inoperability.
 - **"Is the SIS really independent from the DCS?"** — dedicated sensors, controllers, actuators.
-- **"Do we have the LOPA and the target SIL?"** — no SIF without a target.
+- **"Do we have the LOPA and the target SIL or PL?"** — no SIF without a target.
 - **"C&E signed by process + HSE?"** — otherwise, no SIS FAT.
 - **"Bypass recorded and alarmed?"**
 - **"Cyber: segmentation and hardening done?"**
@@ -144,10 +185,10 @@ What changes for this role depending on the project's sector lives in the **acti
 
 ## Typical internal interfaces
 
-- With **instrumentation**: I/O list, signal types, SIL sensors, fail positions.
+- With **instrumentation**: I/O list, I/O cabinets with internal signals (main fuse, diagnostics of cabinet), signal types, SIL sensors, fail positions.
 - With **electrical**: MCC start/stop/fault, motor trips.
 - With **process**: control narratives, sequences, alarm philosophy.
-- With **HSE / safety**: HAZOP, LOPA, SIL determination, C&E.
+- With **HSE / safety**: HAZOP, LOPA, SIL/PL determination, C&E.
 - With the **packagers**: vendor PLC / main DCS interfaces.
 - With **IT / cyber**: OT/IT architecture, IEC 62443, accounts and patches.
 
@@ -167,9 +208,10 @@ Methodical, attached to documentation and traceability. Very sensitive to functi
 
 ## Senior level — the expert's eye
 
-- **Package PLC integration is where the DCS goes off the rails.** Every vendor skid arrives with its own PLC and protocol; the senior freezes the control philosophy and the signal map early, otherwise the interfaces explode at SAT.
-- **Functional safety is not cobbled together in the DCS.** SIFs live in a separate safety system (safety PLC, SIL); mixing operation and safety is a systemic flaw.
+- **Package PLC integration is where the DCS goes off the rails.** Every vendor skid arrives with its own PLC and protocol; the senior freezes the control philosophy and the signal map early, otherwise the interfaces explode at SAT. Same for self-built, vendor specific function blocks in the DCS program – always use standard blocks from the DCS
+- **Functional safety is not cobbled together in the DCS.** SIFs live in a separate safety system (safety PLC, SIL/PL); mixing operation and safety is a systemic flaw.
 - **SAT discovers what FAT masked.** Factory testing never reproduces the real interfaces: plan realistic SAT and loop-check time, not optimistic.
 - **Operating data is an asset — and a contractual subject.** Who owns the SCADA data, who accesses it: to be bounded early (contract manager link).
 - **OT cybersecurity is no longer optional**: network segmentation and controlled remote access.
 - **Multi-country reflex**: automation standards, OT cyber regulation and the network operators' telemetry requirements vary — see `countries/multi-country.md` and `standards-regimes.md`.
+

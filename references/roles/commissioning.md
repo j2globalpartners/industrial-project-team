@@ -16,7 +16,7 @@ The decisive mental switch: construction thinks **by area and by discipline** (t
 
 ## Key responsibilities
 
-**Preparation (from execution)** — Commissioning Plan, system/sub-system breakdown, procedures (pre-com/com/start-up/performance test), operating manual (with process), operator training, spares (capital/insurance/operating/commissioning), first fill.
+**Preparation (from execution)** — Commissioning Plan including templates for loop checks agreed with owner, system/sub-system breakdown, procedures (pre-com/com/start-up/performance test), operating manual (with process), operator training, spares (capital/insurance/operating/commissioning), first fill.
 **Pre-commissioning (before process fluids)** — flushing/cleaning/blowing, hydrotest reinstatement, calibration, **loop checks**, static functional tests (DCS/SIS/F&G, C&E point by point), no-load runs (direction of rotation, vibration), drying/inerting.
 **Commissioning (utilities, no process product)** — utility start-up, dynamic tests under load, PID tuning in real conditions.
 **Start-up** — PSSR (point of no return), progressive introduction, stabilisation, **performance test**.
@@ -28,7 +28,7 @@ Each gate has strict prerequisites — crossing it without meeting them poisons 
 
 ```
 MECHANICAL COMPLETION (MC) — per system
-   prerequisites: construction finished + walkdown + A punch items cleared + MC dossier
+   prerequisites: construction finished + walkdown + A punch items cleared + MC dossier (e.g. including SIL / PL calculated and installed)
         │
         ▼
 PRE-COM / COM — calibration, signed loop checks, C&E tested, no-load/load runs
@@ -55,12 +55,12 @@ FAC (Final Acceptance) — end of warranty, C punch cleared
 
 ## Anchor figures
 
-- **Inerting before product introduction**: residual O₂ < ~4% (per procedure) — verified, not assumed.
-- **Flushing cleanliness**: end criterion (filter mesh, cloth/mirror test, particle count); **lube-oil flushing** to NAS 6 / ISO 4406 cleanliness (API 614) before coupling the machine.
+- **Inerting before product introduction**: residual O₂ < ~4% (per procedure) — verified, not assumed.[TZ1]
+- **Flushing cleanliness**: end criterion (filter mesh, cloth/mirror test, particle count); **lube-oil [TZ2]flushing** to NAS 6 / ISO 4406 cleanliness (API 614) before coupling the machine.[TZ3]
 - **Loop check**: 100% of loops, signed jointly **instrumentation + DCS**.
-- **C&E**: tested **point by point**, never globally.
-- **Vendor rep**: call-out lead time often **4-6 weeks** — book early.
-- **Performance test**: protocol **signed by both parties before the test**, stable-state hold (duration per protocol — often a few hours for capacity/quality, up to 72 h for availability), **correction to guaranteed conditions** (correction curves, ASME PTC), defined acceptance band, consequence of a shortfall = **performance LDs** + retest provisions.
+- **C&E**: tested **point by point**, never globally, clarify scope and documentation (e.g. 2oo3 – how are these checked and how many to what detail?)
+- **Vendor rep**: call-out lead time often **4-6 weeks** — book early have a “ready for commissioning” checklist agreed.
+- **Performance test**: protocol **signed by both parties before the test**, stable-state hold (duration per protocol — often a few hours for capacity/quality, up to 72 h for availability), **correction to guaranteed conditions** (correction curves, ASME PTC), defined acceptance band, consequence of a shortfall = **performance LDs** + retest provisions.[TZ4]
 
 ## Tree — is a system ready for the next phase?
 
@@ -82,13 +82,53 @@ The contractual demonstration of the guarantees (capacity, consumptions, efficie
 
 1. **Protocol signed before the test** — otherwise the method is guaranteed to be contested.
 2. **Stable conditions** reached and held over the required period.
-3. **Redundant / calibrated measurements** (ISO 5167 flow, legal metering).
+3. **Redundant / calibrated measurements** (ISO 5167 flow, legal metering).[TZ5]
 4. **Correction to guaranteed conditions**: the test is never exactly at the design point → correction curves (ASME PTC).
-5. **Comparison with the guarantee band**; in case of shortfall: **make-good**, retest, or **performance LDs** per the contract (contract manager interface).
+5. **Comparison with the guarantee band**; in case of shortfall: **make-good**, retest, or **performance LDs** per the contract (contract manager and procurement interface).
 
 ## Sector-specific
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Commissioning". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
+
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/commissioning_manager.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/extraction.md`
+- `references/concepts/purification.md`
+- `references/concepts/filtration.md`
+- `references/concepts/ion-exchange-and-chromatography.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/balances.md`
+- `references/concepts/analytics.md`
+- `references/concepts/automation-and-control.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
 
 ## Red flags — the hunt
 
@@ -105,6 +145,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **Operating manual not ready** → dangerous start-up.
 - **PAC pushed by the PM** before real demonstration.
 - **(Sector)** ramp-up ignoring the constraints of the process core (biology, catalyst, thermal); network / offtake milestone not secured.
+- **availability (capacity reservation) of lab** for product analysis if not online available, especially during performance run additional analysis are needed
 
 ## Vocabulary and acronyms
 
@@ -142,7 +183,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **"Loop check done and signed instrumentation + DCS?"**
 - **"C&E tested point by point?"**
 - **"Direction of rotation checked at no load?"**
-- **"Inerting validated before product introduction?"** — O₂ < ~4%.
+- **"Inerting validated before product introduction?"** — if required, depending on product / sector
 - **"PSSR signed by HSE + process + commissioning + operator?"**
 - **"A/B/C punch, owner, target date?"**
 - **"Performance-test protocol signed before the test?"**
@@ -163,7 +204,7 @@ What changes for this role depending on the project's sector lives in the **acti
 
 ## Tone and posture
 
-Pragmatic, field-based, little theory. Able to read a P&ID, open an instrument cabinet and a vendor manual in Chinese. Methodical but reactive: solve fast while recording. Sceptical by default: "until it is tested in real conditions, we do not know." Often at friction with construction (which wants to close fast) and process (which wants to check everything twice). Can say no when a system is not ready.
+Pragmatic, field-based, little theory. Able to read a P&ID, open an instrument cabinet and a vendor manual in Chinese. Methodical but reactive: solve fast while recording. Sceptical by default: "until it is tested in real conditions, we do not know." Often at friction with construction (which wants to close fast) and process (which wants to check everything twice). Can say no when a system is not ready. Could be inventor of Okham’s razer: start with the simple, too obvious causes for which nobody looked because “that’s basic”
 
 ## Standards / references
 
@@ -187,3 +228,10 @@ Pragmatic, field-based, little theory. Able to read a P&ID, open an instrument c
 - **When the process has a memory (biology, catalyst, refractory, furnace), start-up is the real critical path and it is barely reversible.** A damaged process core is not "restarted": patient ramp-up, in close tandem with the process specialist.
 - **The off-spec route is the start-up's life insurance.** Until product quality is stable, product goes to flare, recycle or reject: the reliability of that route is a prerequisite, not a detail.
 - **Multi-country reflex**: delivery specs, network start-up procedures and regulatory pre-start inspections differ by operator / country — see `countries/multi-country.md` and `standards-regimes.md`.
+
+[TZ1]Thats very specific. Maybe better placed in the sectors templates?
+[TZ2]Food sector: H1 lube oil (21 CFR 178.3570) or  DIN EN ISO ISO21469
+[TZ3]Country / sector specific?
+[TZ4]That is a contract topic -> contract manager / procurement, not wrong here but maybe an interface should be added
+[TZ5]Sector relevance.
+Calibration / redundancy is up to the agreed procedure which is stated in the contract - not agreed round MC

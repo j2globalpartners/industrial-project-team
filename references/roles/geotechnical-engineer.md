@@ -18,8 +18,9 @@ Translate the ground conditions into a safe, economical and constructible founda
 
 ### Before — preparing the campaign
 - **Investigation programme** — type and number of boreholes, depth, in-situ and laboratory tests, according to the foreseeable loads and the sensitivity of the structure.
-- **Investigation brief by phase** — most regimes define phases (preliminary / desk study → design-level investigation → supplementary investigation → construction supervision; in France NF P94-500 G1 → G5, in the UK BS 5930 / EC7 ground investigation reports). For an industrial project, aim at minimum for a **design-level investigation** before purchasing special foundations.
+- **Investigation brief by phase** — most regimes define phases (preliminary / desk study → design-level investigation → supplementary investigation → construction supervision; in France NF P94-500 G1 → G5, in the UK BS 5930 / EC7 ground investigation reports, in Germany Gruendungsgutachten, Gruendungsempfehlung, Setzung- und Bettungsmodul). For an industrial project, aim at minimum for a **design-level investigation** before purchasing special foundations.
 - **Preliminary geological reconnaissance** — geological survey maps (national geological service), site history, contaminated land, mining, karst.
+- analysis of soil of amount and path of soil disposal (Germany Abfallrechtliche Untersuchung (LAGA Klasse, EBV-Materialklasse); soil to be rebuilt on site has to be stored on / near construction site which requires a lot space
 
 ### During — interpretation and design
 - **Critical reading of the geotechnical report** — synthetic ground model, characteristic parameters per layer, design water level.
@@ -149,6 +150,33 @@ Critical differential settlements (rotating equipment, tanks)?
 - **Preloading**: temporary embankment to pre-compress soft soils (settlement monitoring, sometimes with vertical drains).
 - **Deep compaction / rammed aggregate piers**: niche, specific ground.
 
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/geotechnical_engineer.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
+
 ## Vocabulary and acronyms
 
 - **Investigation phases** — desk study / preliminary / design-level / supplementary / construction supervision (named per regime: G1–G5 in France, GIR in the UK…)
@@ -208,6 +236,7 @@ Critical differential settlements (rotating equipment, tanks)?
 - **"Excavation base acceptance scheduled?"** — final check before pouring, indispensable.
 - **"Load tests planned?"** — at least 1 static test pile at the start of the site, or dynamic on a batch.
 - Wary of a report that concludes "shallow foundations" without a table of pl\*, EM, qc or N60, without a clean geological section, or without an explicit water level.
+- soil management for excavated material, direct disposal vs. intermediate storage vs. long term storage for re-building; disposal type can be analyzed for the whole excavation field and then disposed without additional analysis if authorities agree
 
 ## Typical internal interfaces
 
@@ -240,3 +269,4 @@ Conservative on margins, methodical in reading the data. Can say "boreholes are 
 - **The geotechnical baseline (GBR) protects the contract.** Without it, the ground risk is a guaranteed claim (contract manager link, FIDIC sub-clause 4.12).
 - **Shrink-swell of clays is an ignored long-term risk**: it cracks months after acceptance.
 - **Multi-country reflex**: investigation phasing standards, dominant in-situ method (PMT / CPT / SPT), seismic map and geotechnical code vary by country — see `countries/multi-country.md` and `standards-regimes.md`.
+

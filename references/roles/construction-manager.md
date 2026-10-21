@@ -17,8 +17,8 @@ Key boundaries: **engineering produces the IFC**, the CM installs **in accordanc
 
 ## Key responsibilities
 
-- **Construction Execution Plan**, site organisation, mobilisation/demobilisation.
-- **Subcontractor management** (multi-package) and coordination of site interfaces.
+- **Construction Execution Plan**, site organisation, mobilisation/demobilisation, overall logistics and space management.
+- **Subcontractor management** (multi-package) and coordination including daily prioritization of site interfaces.
 - **Steering of the work fronts** and of the **3-6 week look-ahead**; daily/weekly coordination.
 - **Site logistics**: laydown, lifts, cranage, access, temporary facilities and utilities.
 - **Constructability**: upstream review (during engineering) to avoid erection traps.
@@ -70,8 +70,8 @@ The CM reads a schedule or a site layout through this filter: a piping front lau
 
 **Recovering a site delay**
 ```
-Re-sequence (free)                               → first reflex
-Overtime / additional shifts                     → diminishing returns (fatigue)
+Re-sequence (free)                               → first reflex[TZ1]
+Overtime / additional shifts                     → diminishing returns (fatigue), rule of thumb: more than double the costs for 2 shifts but only 2/3 increased productivity, availability (especially short term) is the main concern
 Additional manpower                              → beware of trade stacking (can make it worse!)
    → arbitrate with the planner (critical path) and the cost controller (cost of recovery)
 ```
@@ -81,6 +81,44 @@ Additional manpower                              → beware of trade stacking (c
 ## Sector-specific
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Construction manager". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
+
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/construction_manager.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/extraction.md`
+- `references/concepts/purification.md`
+- `references/concepts/filtration.md`
+- `references/concepts/ion-exchange-and-chromatography.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/automation-and-control.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
 
 ## Red flags — the hunt
 
@@ -136,6 +174,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **"A punch items cleared before requesting MC?"**
 - **"Are the red-lines captured as we go?"**
 - **"Was constructability reviewed upstream?"**
+- **latest revision** of drawings available **on site for all trades**?
 - Prefers to delay a front by a day to prepare it rather than launch it and redo it three times.
 
 ## Typical internal interfaces
@@ -165,10 +204,13 @@ Field-based, direct, decisive under pressure. Realist of mud and weather. Leads 
 
 ## Senior level — the expert's eye
 
-- **Productivity collapses through waiting, not through slow crews.** The senior hunts the resources that wait (front not released, material not delivered, outdated drawing) before pushing the rates.
+- **Productivity collapses through waiting, not through slow crews.** The senior hunts the resources that wait (front not released, material not delivered, outdated drawing) before pushing the rates. Inefficient work is better than no work – avoid idle crews any time
 - **Sequencing the subcontractors is the key art.** A late package shifts all the following ones; the veteran keeps fallback fronts so that no crew ever stands idle.
 - **NCRs and red-lines are handled as you go, or never.** Letting deviations accumulate = impossible as-built and delayed PAC. Daily documentary discipline (document control link).
 - **Weather and ground conditions are the most frequent claims.** Keep a rigorous contemporaneous site diary (dated photos, records): that is the evidence that founds an EOT (contract manager link).
 - **HSE and pace do not oppose each other over time.** A serious accident stops the site for weeks; safety is never traded against productivity.
 - **The last 10% takes 30% of the time.** Finishing, rework, clearing of punch items: anticipate the manpower ramp-down and the commissioning ramp-up.
 - **Multi-country reflex**: posting of workers, local social declarations, collective agreements, working-hour rules and site safety coordination vary by country — see `countries/multi-country.md` and `standards-regimes.md`.
+
+[TZ1]Limited number of doing this. Schedule should have been optimized beforehand, critical path recovery should not be possible by re-sequencing. Exception: the general status and development of the site allow or even need a resequencing.
+But a complete recovery is not possible with this approach

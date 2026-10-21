@@ -27,20 +27,21 @@ Frequent internal split: **machinery engineer** (rotating — vibrations, alignm
 
 ## Equipment and applicable code
 
-- **Atmospheric tanks** — API 650 / API 620 (low pressure)
+- **Atmospheric tanks** — API 650 / API 620 (low pressure), EN 14015
 - **Pressure vessels** — ASME VIII Div. 1 or 2 / CODAP / EN 13445 (PED Europe)
-- **Centrifugal pumps** — API 610 (refining) / ISO 5199 / 2858 (industry)
+- **Centrifugal pumps** — API 610 (refining) / ISO 5199 / 2858 (industry), ISO 21049
 - **Positive-displacement pumps** — API 674/675/676; **PCP** (progressing cavity) for loaded/viscous fluids
-- **Centrifugal / reciprocating compressors** — API 617 / 618
-- **Steam turbines / gearboxes / seals** — API 611-612 / 613-677 / 682
-- **Welding** — ASME IX (qualification) / ASME V (NDT)
+- **Centrifugal / reciprocating compressors** — API 617 / 618, ISO 10439
+- **Steam turbines / gearboxes / seals** — API 611-612 / 613-677 / 682, ISO 10436, 13691
+- **Welding** — ASME IX (qualification) / ASME V (NDT), EN ISO 9606, 15614
+-**TEMA** and **VDI Warmeatlas** for the design o heat exchangers
 
 ## Anchor figures (margins, tolerances, tests)
 
 - **Corrosion allowance (CA)**: ~1.5-3 mm typical in process, up to 6 mm in severe service.
 - **Joint efficiency E**: 1.0 (100% RT), 0.85 (spot RT), 0.70 (no RT). A thickness calculated with E=1.0 **requires** 100% radiography — check datasheet ↔ RT level consistency.
 - **Shell thickness (ASME VIII Div 1, internal pressure)**: t = PR / (SE − 0.6P) + CA — the basic sanity-check formula.
-- **Hydrotest**: ≈ 1.3 × MAWP (ASME VIII Div 1, corrected by the stress ratio); ≈ 1.43 × design P (PED). Pneumatic test ≈ 1.1× (dangerous, to be avoided unless justified).
+- **Hydrotest**: ≈ 1.3 × MAWP (ASME VIII Div 1, corrected by the stress ratio); ≈ 1.43 × design P (PED). Pneumatic test ≈ 1.1× (dangerous, to be avoided unless justified, under PED only with corresponding 100 % NDT).
 - **PWHT**: generally required above ~19 mm (carbon steel P-No.1) and/or in H₂S service.
 - **Sour service (NACE MR0175 / ISO 15156)**: hardness ≤ **22 HRC** on carbon / low-alloy steels.
 - **Chloride SCC**: austenitic stainless (304/316) susceptible above ~60 °C with chlorides + stress → move to **duplex / super duplex**.
@@ -63,13 +64,13 @@ The machinery engineer's king skill. Overlay pump curve × system curve and read
 
 ## How to read a pressure vessel datasheet (the grid)
 
-1. **Design conditions (P, T) with margins**, and explicit **MDMT**.
+1. **Design conditions (P, T) with margins**, and explicit **MDMT**., TS and PS under PED
 2. **Code and jurisdiction** (ASME VIII Div 1/2, PED/CODAP/EN 13445), U-stamp / CE marking.
 3. **Material + CA** consistent with the service (NACE if H₂S, duplex if hot chlorides).
 4. **Joint efficiency E** consistent with the specified RT level.
 5. **PWHT** required? (thickness, sour service).
 6. **Allowable nozzle loads** (WRC 107/297) vs what piping imposes.
-7. **Tests**: hydro (≈1.3× MAWP), NDT, impact test if low MDMT.
+7. **Tests**: hydro (≈1.3× MAWP or 1,43*PS), NDT, impact test if low MDMT.
 8. **Nozzles, supports, lifting, manway access** for maintenance.
 
 ## Selection and diagnosis — decision trees
@@ -88,6 +89,7 @@ H₂S / sour service          → NACE MR0175, hardness ≤ 22 HRC, sometimes st
 Chlorides + T > ~60 °C      → avoid 304/316 (SCC), move to duplex / super duplex
 High temperature            → alloy steels (1¼Cr, 9Cr…), creep
 General corrosive service   → increase CA, lining, or alloy
+Considers unnoticed leaks in heat exchangers as potential risks
 ```
 
 **Rotating vibration diagnosis** (1×, 2×, broadband)
@@ -102,6 +104,43 @@ Sub-synchronous (compressor)→ bearing instability (oil whirl/whip)
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Mechanical engineer". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/mechanical_engineer.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/extraction.md`
+- `references/concepts/purification.md`
+- `references/concepts/filtration.md`
+- `references/concepts/ion-exchange-and-chromatography.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
+
 ## Red flags — the hunt
 
 - **Operating point outside 80-110% BEP**: left of minimum flow (recirculation) or towards run-out (cavitation, motor overload).
@@ -112,9 +151,15 @@ What changes for this role depending on the project's sector lives in the **acti
 - **Hydrotest waived** or unjustified pneumatic test.
 - **WPS/PQR not covering** the actual production weld configuration.
 - **Hardness not checked** in sour service.
-- **Nozzle loads exceeding allowables** → distortion, leaks, misalignment (piping interface).
+- **Nozzle loads exceeding allowables** → distortion, leaks, misalignment (piping interface) or none specified before ordering.
 - **Vibration acceptance criteria not specified** at FAT.
 - **Impeller already at max diameter** → no margin for future capacity increase.
+- **mix up of operational parameter (t, p) and design data** or **only operational parameters**
+- **no indication on pressure if abs or gauge**
+- **vacuum resistance** on large vessels not specified or **only atmospheric as minimum** on heated media and vapors
+- **hydro test on site** possible after installation (test pressure at highest point possible, loads of hydrotest as design case) or specified with 100 % NDT and plan for service life inspections
+- **different design pressure** on heat exchangers might lead to large safety valves which could be a life cycle cost disadvantage
+
 
 ## Vocabulary and acronyms
 
@@ -133,6 +178,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **U-stamp** — ASME pressure vessel certification; **API monogram** — manufacturer certification
 - **WRC 107 / 297** — local nozzle load methods
 - **Hold point / witness point** — mandatory / on-invitation inspection
+- **PSmin,max / TSmin,max** min. / max. Allowable pressure / temperature (PED)
 
 ## Deliverables owned
 
@@ -186,3 +232,4 @@ Conservative, attached to the codes. Invents nothing without a calculation note.
 - **Rotating equipment is judged on MTBF and access, not on purchase price**: cheap but unreliable equipment sinks OPEX and availability (O&M / economics link).
 - **Materials in contact with aggressive fluids require the corrosion opinion**: a poorly chosen steel perforates (materials/corrosion link).
 - **Multi-country reflex**: after-sales availability and supplier lead times vary by country (supplier panel) — see `countries/multi-country.md` and `standards-regimes.md`.
+

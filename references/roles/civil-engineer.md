@@ -38,6 +38,7 @@ Clear boundary with **geotechnics**: the geotechnical engineer supplies the allo
 - **Tanks / vessels** — raft or concrete ring, API 650/620 civil provisions.
 - **Bunds / retention basins** — waterproofing, regulatory volume.
 - **Special structures** — flare stacks (thermal + wind), heavy structures.
+- **brownfield** - available documentation is probably not compliant with the as-built status
 
 ## Anchor figures (concrete, steel, settlements, cover)
 
@@ -54,7 +55,7 @@ Clear boundary with **geotechnics**: the geotechnical engineer supplies the allo
 
 The classic error is not a wrong calculation, it is a **forgotten load case**. Review:
 
-1. **List all actions**: G (self-weight + permanent), Q (live, traffic), W (wind), S (snow), E (seismic), T (thermal), equipment loads, piping loads (friction, anchor, expansion), internal pressure/vacuum.
+1. **List all actions**: G (self-weight + permanent), Q (live, traffic), W (wind), S (snow), E (seismic), T (thermal), equipment loads, piping loads (friction, anchor, expansion), internal pressure/vacuum, pressure test piping (water filling preferred even if operated with gas).
 2. **Equipment states**: empty / operating / **test (hydrotest full of water)** / upset. Each can govern a different check — an **empty tank + wind** overturns, a **full** one punches the ground.
 3. **Build the ULS and SLS combinations** with the correct ψ coefficients (EC0). Do not forget the seismic and accidental combination.
 4. **Check both families of limit states**: ULS (strength, stability against overturning/sliding/uplift) **and** SLS (deflections, cracking, vibrations, settlements).
@@ -74,6 +75,40 @@ The trickiest civil calculation. A rotating machine imposes a **dynamic** load, 
 
 What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Civil / structural engineer". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
+## Knowledge and concept references
+
+Use the following additional references when available and applicable to the active sector and review scope:
+
+- Matching role know-how: `references/knowhow/civil_engineer.md`
+- Shared technical concepts:
+- `references/concepts/beet-front-end.md`
+- `references/concepts/purification.md`
+- `references/concepts/evaporation.md`
+- `references/concepts/condensation.md`
+- `references/concepts/thick-juice-storage.md`
+- `references/concepts/crystallization.md`
+- `references/concepts/centrifugation.md`
+- `references/concepts/sugar-drying-storage-and-handling.md`
+- `references/concepts/pulp-processing.md`
+- `references/concepts/liquid-sugar-and-inversion.md`
+- `references/concepts/wastewater-treatment-ara.md`
+- `references/concepts/ethanol-and-biogas-integration.md`
+- `references/concepts/maintenance-and-reliability.md`
+- `references/concepts/process-safety.md`
+- `references/concepts/energy-integration.md`
+- Original supporting documents: `references/sources/`
+
+Application rules:
+
+- This role file remains authoritative for the role's mission, boundaries, responsibilities, professional perspective and review behaviour.
+- The active sector profile remains authoritative for sector-specific priorities, terminology, interfaces, anchor figures and red flags.
+- The matching know-how file provides role-specific interpretation and navigation of additional technical knowledge.
+- Shared concept files provide common process, system and unit-operation knowledge that may be used by multiple roles from their own professional perspectives.
+- Load all listed concepts materially connected to the review scope. A broader set may be loaded when credible interfaces or downstream consequences may exist.
+- Applying a shared concept does not transfer another specialist's responsibilities or override this role's professional boundary.
+- When a concept cites an original source, preserve the available source filename, slide or page range, and section reference in any material finding that relies on it.
+- If a matching know-how or concept file is unavailable, record the missing reference and continue only within the evidence and boundaries that remain available.
+
 ## Red flags — the hunt
 
 - **Equipment loads not frozen before pouring** — the cardinal sin; a base poured on provisional data gets demolished.
@@ -86,7 +121,7 @@ What changes for this role depending on the project's sector lives in the **acti
 - **Rack friction/anchor loads underestimated**.
 - **Insufficient edge distance / embedment** for anchor bolts.
 - **Seismic ignored or wrong zone** retained.
-
+- **horizontal loads** in pipe racks or general in height e.g. from heat elongation by temperature (steam lines). Larger Diameter of pipe, higher temperature (design temperature, not operating temperature), higher installation all add horizontal loads.
 ## Vocabulary and acronyms
 
 - **ULS / SLS** — Ultimate / Serviceability Limit State
@@ -152,3 +187,4 @@ Methodical, pragmatic, obsessed with the site schedule because the foundations c
 - **Buried civil works condition the upstream critical path**: foundations and tanks block everything else — secure them early.
 - **Climatic loads (snow/wind/seismic) come from the country's annex or code**: a calculation under another country's annex is wrong here.
 - **Multi-country reflex**: the country's structural code family (Eurocodes + national annex, ASCE/ACI/AISC, BS, GB, IS, AS/NZS…) with its loads and seismic map — see `countries/standards-regimes.md`.
+
