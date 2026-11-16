@@ -56,6 +56,9 @@
 ### Financing & FID
 - Bankability conditioned by: compliant long-term PPA, take-or-pay offtake with a solid counterparty, assignable OEM guarantees, notified grant; DSCR sensitive to **electricity price and load factor**; stack replacement reserve; CPs at drawdown: permits, renewable-hydrogen certification, grid connection, EPC / OEM signed.
 
+### Project insurance
+— nothing specific —
+
 ### Process engineer
 - Mass / energy balance from the electrolyser to the delivery point: **purification** (deoxo, drying → ISO 14687 purity), **O₂ management** (safe vent, possible recovery), **water** (demineralisation, conductivity, regeneration discharges), **heat** (cooling, recovery), **compression and buffer storage** (autonomy, cycles), N₂ vents and purges, emergency shutdown and depressurisation philosophy.
 - Red flag: H₂ / O₂ cross-over at low load ignored in the control philosophy (low-load limit = safety, not only efficiency).
@@ -122,6 +125,12 @@
 
 ### Document control
 - **Pressure-equipment dossiers** (conformity, calculation notes, test minutes), major-hazard dossier / hazard study, OEM documentation under escrow, **renewable-hydrogen traceability** (hourly electricity / production data) — dossiers that condition commissioning and acceptance.
+
+### Site & stakeholder engagement
+— nothing specific —
+
+### Supply & offtake
+- Both ends are FID locks (identity card): a **compliant electricity PPA** — the electricity price makes or breaks the LCOH — and a **firm H₂ offtake** (volumes, duration, take-or-pay, purity and pressure specifications) with a solid counterparty.
 
 ## Country × sector notes (to be checked locally)
 
