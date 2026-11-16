@@ -160,7 +160,7 @@ Methodical, attached to documentation and traceability. Very sensitive to functi
 - **IEC 61511** — process SIS (reference; ANSI/ISA 61511 in the US); **IEC 61508** — generic functional safety upstream
 - **IEC 62443** — industrial control systems cybersecurity (OT); national OT cyber regulations where they exist (NIS2 in the EU, NERC CIP for US power, sector regulators)
 - **ISA-88** (batch); **ISA-95** (enterprise/control integration, levels 0-4)
-- **ISA-18.2 / EEMUA 191** — alarm management
+- **ISA-18.2 / EEMUA 191** — alarm management (EEMUA 191: current edition is the 4th, 2024 — check which edition the project specification calls up)
 - **ISA-101** — HMI (situational awareness); **ISA-84** — US equivalent of IEC 61511
 - **API RP 554 / 556** — process control (refining)
 - **Applicable set by country**: the codes above are families and common references; the project country's regime decides the set actually enforced (structural code and annex, pressure equipment, piping, electrical, hazardous areas, process safety, contract form) — `countries/standards-regimes.md`.
