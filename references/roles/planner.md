@@ -43,7 +43,7 @@ Critical Path Method. The schedule is not a list of dates, it is a **logic netwo
 This is the filter applied to any received schedule, in order. Trade reference: the **DCMA 14-point assessment**. A pretty Gantt can hide rotten logic: what matters is the network underneath.
 
 ### Step 1 — Logic integrity
-- **Open ends** (activities without predecessor or without successor): should only exist at the very start and very end. Many open ends → the CPM is wrong, the calculated critical path is meaningless. **DCMA threshold: 0 tolerated** (except start/finish milestones).
+- **Open ends** (activities without predecessor or without successor): should only exist at the very start and very end. Many open ends → the CPM is wrong, the calculated critical path is meaningless. **Target: none, except start/finish milestones; DCMA threshold: missing logic on no more than 5% of remaining activities** (reference point to be confirmed in the DCMA document).
 - **Logic density**: ~1.5 to 2 links per activity. Too low = loose network, artificially high float.
 - **Link types**: **FS must represent ≥ 90%**. Too many SS/FF = hidden and fragile parallelism. **SF ≈ 0**.
 
@@ -109,6 +109,10 @@ When the delay becomes contractual, the planner produces the analysis — recogn
 - **Collapsed as-built** — events are removed to show what would have been.
 
 Related issue: **float ownership**. Who benefits from the slack — the project, the client, the contractor? It is contractual, to be clarified early with the contract manager.
+
+## Sector-specific
+
+What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Planner". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
 ## Red flags — the monthly hunt
 
