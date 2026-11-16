@@ -3,11 +3,11 @@
 <p align="center">
   <a href="LICENSE.md"><img alt="Content licence: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-informational"></a>
   <a href="LICENSE.md"><img alt="Script licence: MIT" src="https://img.shields.io/badge/script-MIT-informational"></a>
-  <img alt="Version 1.0.0" src="https://img.shields.io/badge/version-1.0.0-informational">
+  <img alt="Version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-informational">
   <img alt="No dependencies" src="https://img.shields.io/badge/dependencies-none-success">
 </p>
 
-**Ask any role of an industrial project team, and get a practitioner's answer instead of a textbook one.** Twenty-seven senior-level role sheets — project manager, cost controller, planner, contract manager, process, piping, electrical, HSE, commissioning, O&M and the rest — each with a reading grid to apply in order, indicative anchor figures, decision trees and the red flags a veteran hunts. The sector layer is **not shipped**: when your project belongs to one, the skill offers to write that profile with you. The country layer is worldwide: once the project country is defined, every role quotes the code set actually enforced there.
+**Ask any role of an industrial project team, and get a practitioner's answer instead of a textbook one.** Thirty senior-level role sheets — project manager, cost controller, planner, contract manager, process, piping, electrical, HSE, commissioning, O&M and the rest — each with a reading grid to apply in order, indicative anchor figures, decision trees and the red flags a veteran hunts. The sector layer is **not shipped**: when your project belongs to one, the skill offers to write that profile with you. The country layer is worldwide: once the project country is defined, every role quotes the code set actually enforced there.
 
 **→ [See what it actually answers](examples/sample-answers.md)** before installing anything.
 
@@ -49,13 +49,15 @@ No dependencies: Markdown plus one standard-library Python script, no network ac
 
 | Layer | Content | Shipped |
 |---|---|---|
-| **Generic roles** (`references/roles/`) | 27 sheets: how the role differs from its neighbours, reading grid, anchors, decision trees, red flags, the expert's eye | Yes |
+| **Generic roles** (`references/roles/`) | 30 sheets: how the role differs from its neighbours, reading grid, anchors, decision trees, red flags, the expert's eye | Yes |
 | **Sector profiles** (`references/sectors/`) | What changes for each role in a sector: identity card, sector-specific roles, per-role inserts, country × sector notes | Only the fallback `generic` and the template — **every sector is created on demand** |
 | **Countries** (`references/countries/`) | Nine axes that move at the border, a **worldwide map of technical standards regimes** by discipline (EU, UK, US, Canada, Australia/NZ, Gulf, India, China, Japan, Brazil, South Africa, international oil & gas, Norway, Switzerland, Turkey, Egypt, francophone and anglophone Africa, Singapore, Malaysia, Indonesia, South Korea, Mexico, Chile), five example country cards, substance risk | Yes |
 
 An answer = role sheet(s) + the active profile's insert if it exists + the country layer once the country is defined. The role sheets are written code-agnostic: they quote standards by family, and the project country decides the set actually enforced — no regime is assumed by default.
 
-The 27 roles: project manager, estimator, cost controller, planner, contract manager, risk manager, financing & FID; process, mechanical, materials & corrosion, piping, civil, geotechnical, electrical, instrumentation and DCS engineers; HSE, technical safety, environment & permitting; procurement, construction manager, quality, commissioning, O&M; grid & utility connection, interface manager, document control.
+The 30 roles: project manager, estimator, cost controller, planner, contract manager, risk manager, financing & FID, project insurance; process, mechanical, materials & corrosion, piping, civil, geotechnical, electrical, instrumentation and DCS engineers; HSE, technical safety, environment & permitting; procurement, construction manager, quality, commissioning, O&M; grid & utility connection, interface manager, document control, site & stakeholder engagement, supply & offtake.
+
+Behind the sheets, `references/sources/` lists the documents they rest on (five files, by family of roles). Each fact there carries its confirmation level — **[V]** was read in the document itself, the others were only located through a search engine — so it is a lead to the source, to be re-read before being quoted in a deliverable.
 
 ## Creating a sector profile
 
@@ -85,7 +87,8 @@ python scripts/team.py new-country IT --name "Italy"
 
 ```
 SKILL.md                       profile selection, role catalogue, answer protocol, sector creation
-references/roles/              27 generic sheets + _template-role.md
+references/roles/              30 generic sheets + _template-role.md
+references/sources/            documentary sources by family of roles, each fact with its confirmation level
 references/sectors/            generic.md + _template-sector.md
 references/countries/          multi-country.md, standards-regimes.md, country-cards.md, _template-country.md
 config/                        project.json (default) and schema.md
@@ -95,9 +98,9 @@ examples/                      sample answers + five unreviewed sector profiles
 
 ## Status and support
 
-Version 1.0.0, first public edition, published 11 September 2026. It is used in production on the author's own projects, and maintained on that basis — not as a supported product. Issues and pull requests are read and answered; there is no service-level promise behind them.
+Version 1.1.0 (13 November 2026), second edition; the first was published on 11 September 2026. It is used in production on the author's own projects, and maintained on that basis — not as a supported product. Issues and pull requests are read and answered; there is no service-level promise behind them.
 
-Two honest caveats, also stated in the [changelog](CHANGELOG.md): the English of this first edition has not been proofread by a native speaker, and the standards regime map entries are reference points to be confirmed locally. Both are open to correction — see [CONTRIBUTING.md](CONTRIBUTING.md). Corrections from practitioners of a sector or a country are the contributions with the most value here.
+Three honest caveats, also stated in the [changelog](CHANGELOG.md): the English has not been proofread by a native speaker; the standards regime map entries are reference points to be confirmed locally; and the three role sheets added in 1.1.0 (project insurance, site & stakeholder engagement, supply & offtake), like the documentary sources, are unreviewed by practitioners. All are open to correction — see [CONTRIBUTING.md](CONTRIBUTING.md). Corrections from practitioners of a sector or a country are the contributions with the most value here.
 
 ## Disclaimer
 
