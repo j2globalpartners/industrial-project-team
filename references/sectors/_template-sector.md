@@ -44,6 +44,7 @@ One `###` per role, **with exactly the short title from the catalogue in `SKILL.
 ### Contract manager
 ### Risk manager
 ### Financing & FID
+### Project insurance
 ### Process engineer
 ### Mechanical engineer
 ### Materials & corrosion engineer
@@ -64,6 +65,8 @@ One `###` per role, **with exactly the short title from the catalogue in `SKILL.
 ### Grid & utility connection
 ### Interface manager
 ### Document control
+### Site & stakeholder engagement
+### Supply & offtake
 
 ## Country × sector notes (optional)
 

@@ -13,6 +13,15 @@ Each card follows the nine axes of `multi-country.md` and opens with its **techn
 - **Standards**: Eurocodes French NA, NF C 15-100 / NF C 13-100 / 13-200, ICPE ministerial orders, pressure equipment (DESP / PED).
 - **Language**: French (dossiers and procedures).
 
+Reference points checked at source on 13 November 2026, to be re-checked at project date:
+
+- **Third-party appeal against an environmental authorisation**: two months for decisions taken from 1 September 2024 (decree 2024-423), four months before. The appeal must be notified to the author of the decision and to its beneficiary within fifteen clear days, failing which it is inadmissible (decree 2023-1103).
+- **Environmental authorisation procedure**: for applications filed from 22 October 2024, the public consultation runs in parallel with the examination of the application, over three months.
+- **Hazard-study effect thresholds** (order of 29 September 2005): on people 3 / 5 / 8 kW/m² and 50 / 140 / 200 mbar; domino effects to be examined from 8 kW/m² and 200 mbar; very severe structural damage at 300 mbar.
+- **Construction safety**: written prevention plan from 400 hours of work over twelve months, or for the listed dangerous work (labour code R. 4512-7); three categories of construction safety coordination (R. 4532-1).
+- **Electricity connection**: an Enedis connection offer is valid three months from dispatch; it lapses without possible extension and the project leaves the queue. RTE issues its technical and financial proposal (PTF) within three months.
+- **Geotechnics**: the NF P 94-500 missions G1, G2 and G3 / G4 must follow one another; G1, G2 and G4 are carried out on the owner's behalf.
+
 ## 🇧🇪 Belgium
 
 - **Standards regime**: `eu` — Eurocodes with Belgian national annexes, EN / PED / ATEX, AREI / RGIE (electrical), Synergrid network requirements.
