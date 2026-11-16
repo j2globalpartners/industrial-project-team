@@ -61,6 +61,9 @@
 - Classic **project finance** on PPA / feed-in premium: debt sized at **P90** (sometimes P75), DSCR ~1.20–1.35 depending on revenue quality (order of magnitude), tenor aligned with the revenue contract; CPs at drawdown: permit free of appeal, connection agreement, PPA / award, EPC signed, insurance, lease.
 - Sensitivities: yield, PR, captured price (merchant PPA), curtailment, connection cost, degradation.
 
+### Project insurance
+- Insurance in place is a CP at drawdown; dominant natural perils in the register: **hail and storm** (tracker stow strategy), plus theft of cables and modules. Red flag (sector): hail / storm without a stow strategy or suitable insurance.
+
 ### Process engineer
 - Not applicable: replaced by the **PV / yield engineer** (above). On a site with BESS, the "process" reduces to energy / power sizing and the cycling strategy.
 
@@ -136,6 +139,12 @@
 
 ### Document control
 - Proportionate EDMS but **impeccable connection dossier and certificates** (conformity, tests, energisation minutes): they trigger energisation and acceptance; electrical as-built and pile layout for O&M.
+
+### Site & stakeholder engagement
+- **Secured land** is an FID lock (identity card): signed lease promises (long lease of 30–40 years) and easements; counterparts are landowners and farmers, the municipality and neighbours, the chamber of agriculture, the heritage body. The third-party appeal against the permit is the norm, not the exception.
+
+### Supply & offtake
+- No feedstock; **secured revenue** is an FID lock (identity card): tender award (contract-for-difference / feed-in premium) or signed PPA.
 
 ## Country × sector notes (to be checked locally)
 
