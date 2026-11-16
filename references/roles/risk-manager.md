@@ -147,3 +147,14 @@ Constructive sceptic, allergic to surface optimism as much as to catastrophism. 
 - Monte Carlo methods (QCRA/QSRA); correlation and distribution functions (triangular, PERT).
 - Sheet cross-references: `estimator` (uncertainty → contingency), `grid-connection`, `countries/multi-country.md`; sector skills listed by the active profile.
 - **Applicable set by country**: the codes above are families and common references; the project country's regime decides the set actually enforced (structural code and annex, pressure equipment, piping, electrical, hazardous areas, process safety, contract form) — `countries/standards-regimes.md`.
+
+## Senior level — the expert's eye
+
+- **A long register reassures; a short one steers.** A junior piles up 200 lines; a veteran knows that five to ten risks carry most of the exposure and spends the review on those.
+- **The risks that kill are rarely lines of the register: they are assumptions of the base case.** The senior starts by re-reading the assumptions of the schedule and the estimate — productivity, permit date, vendor lead time — before opening the register.
+- **Correlation makes the tail of the distribution.** A Monte Carlo run on independent risks yields a flattering P80, whereas engineering delay, procurement overrun and site productivity move together. The tell: a P50–P80 gap of a few percent on a poorly defined project.
+- **A risk whose owner has no power to act is not treated.** The name in the column must be the one who holds the budget or the contract, not the one who raised the risk in the workshop.
+- **A contingency that never falls and one that melts before construction say the same thing**: nobody is linking closed or materialised risks to the draw-down. The senior reconciles the two every month with the cost controller.
+- **Risk transfer is verified in the exclusions.** Liability cap, insurance deductible, subcontractor solvency: a "transferred" risk often comes back through the window.
+- **Opportunities are managed like risks**, with an owner and a date — otherwise the register only serves to justify provisions.
+- **Multi-country reflex**: country risk, exchange rate, administrative lead times and contractual practice are reassessed at every border — see `countries/multi-country.md` and `standards-regimes.md`.

@@ -52,7 +52,7 @@ These lead times drive the schedule: this equipment is ordered **first**, often 
 
 ## INCOTERMS 2020 — the transfer grid
 
-Who pays what, and where the risk switches. Most costly confusions: **FCA vs FOB** (FOB reserved for conventional sea freight, misused for containers → use FCA), **DAP vs DDP** (DDP = the vendor clears import customs and pays the duties; rarely desirable, the vendor knows the local tax rules poorly), **CIF/CIP** (insurance at the legal **minimum** — often insufficient, require extended cover).
+Eleven rules. Who pays what, and where the risk switches: **risk passes at the point and time of delivery defined by the rule**, which is not where the seller stops paying (under the "carriage paid" rules the seller pays to destination but the risk has already passed). Most costly confusions: **FCA vs FOB** (FOB reserved for conventional sea freight, misused for containers → use FCA), **DAP vs DDP** (DDP = the vendor clears import customs and pays the duties; rarely desirable, the vendor knows the local tax rules poorly), **CIF/CIP** (the only two rules that oblige the seller to insure — under every other rule, whoever carries the risk arranges their own cover; and the cover the rule requires can be minimal: check its level, require extended cover).
 
 | Family | Terms | Risk transfer |
 |---|---|---|
@@ -111,6 +111,10 @@ PR (with technical MR) → RFQ to qualified vendors → TBE (engineering) + CBA 
 ### Vendor documentation
 - **Vendor Document Register (VDR)** — all expected documents (drawings, calculations, manuals, certificates).
 - **Flow tracking** — review by discipline, A/B/C codes (approved / approved with comments / rejected), vendor returns. A document not returned = risk of stoppage at receipt.
+
+## Sector-specific
+
+What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Procurement". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
 ## Red flags — the hunt
 
