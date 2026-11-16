@@ -50,6 +50,9 @@
 ### Financing & FID
 - Project finance on PPA / capacity market / treatment contract (WtE, municipality) or balance-sheet financing; sensitivities: spread, availability, fuel cost, CO₂; CPs: connection, permits, fuel contract, EPC / OEM, LTSA.
 
+### Project insurance
+— nothing specific —
+
 ### Process engineer
 - Becomes **thermodynamics and water chemistry**: heat balance and water-steam cycle, cooling sizing (water vs air — water permits), water treatment (demineralisation, boiler chemistry), combustion and **flue-gas treatment** (NOₓ: SCR / SNCR; dust; acids; dioxins in WtE), ash / bottom ash / APC residue management; in biomass: fuel preparation and drying, variable LHV.
 
@@ -109,6 +112,12 @@
 
 ### Document control
 - OEM documentation (manuals, curves, certificates), pressure-equipment and boiler dossiers, **performance-test and emissions reports** (QAL) — contractual and regulatory documents; as-built and operating dossier handed over before PAC.
+
+### Site & stakeholder engagement
+- Neighbours are a named counterpart (identity card): plume, and truck traffic for biomass and waste-to-energy; permits go through a public inquiry.
+
+### Supply & offtake
+- Both ends are FID locks (identity card): the **fuel contract** (gas; biomass — sustainable resource, price, duration, indexation; waste — treatment contract with the municipality) and the **offtake / market** (PPA, capacity market, heat).
 
 ## Country × sector notes (to be checked locally)
 

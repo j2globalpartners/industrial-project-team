@@ -103,6 +103,10 @@ Overrun detected on a cost account
 
 The discipline of the **trend register** (register of potential deviations) is the heart of the trade: anticipating costs not yet committed, pricing them as exposure, and integrating them into the forecast well before the invoice.
 
+## Sector-specific
+
+What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Cost controller". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
+
 ## Red flags — the monthly hunt
 
 - **"Frozen" actuals**: an account without movement while the work is running → missing accrual, underestimated EAC. Always reconcile physical progress and booked cost.

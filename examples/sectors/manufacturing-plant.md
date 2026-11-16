@@ -56,6 +56,9 @@
 ### Financing & FID
 - On balance sheet or with grants (national investment programmes, regions, IPCEI, IRA / CHIPS): conditions (jobs, milestones, local content) to be integrated into the schedule; business case sensitive to ramp-up yield and the SOP date; sale-and-leaseback of the building sometimes.
 
+### Project insurance
+- The **property insurer** (FM Global HPR-type) acts as a quasi-contractual prescriber (identity card): fire analysis, sprinklers, compartmentation, lithium storage. Red flag (sector): insurer's requirements discovered after the permit.
+
 ### Process engineer
 - Becomes **lines and flows engineer**: mapping of the manufacturing process, capacity per station, bottlenecks, **flows** (product, personnel, materials, waste, cross-contamination in pharma / food), URS per equipment item, required utilities, intermediate storages, **hygienic design** (food, EHEDG), special processes (surface treatment, painting, welding — NADCAP in aerospace).
 
@@ -115,6 +118,12 @@
 
 ### Document control
 - **Qualification** dossier (URS, DQ, IQ, OQ, PQ, protocols, reports) and **CE** documentation of the machines: regulatory and inspection documents; building hand-over dossier; data integrity of electronic records (21 CFR Part 11); as-built drawings of the utilities.
+
+### Site & stakeholder engagement
+- **Land and permits** are an FID lock (identity card): land take and zoning, with the local authority and the developer of the industrial estate as counterparts.
+
+### Supply & offtake
+— nothing specific —
 
 ## Country × sector notes (to be checked locally)
 

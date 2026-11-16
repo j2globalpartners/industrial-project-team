@@ -52,7 +52,7 @@ The king artefact of technical safety. The sequence, in order:
 
 - **Hole sizes**: small / medium / large / rupture (cf. QRA grid).
 - **Risk criteria**: individual ~10⁻⁶ (acceptable) to ~10⁻³/yr (intolerable worker); F-N curve for societal — **always defined before the QRA**, never chosen afterwards.
-- **Effect thresholds per receptor**: people (3 / 5 / 8 kW/m² in the French set, other regimes' values — see HSE); **equipment / escalation / domino** higher (~12.5 kW/m² escalation, ~37.5 kW/m² steel failure; 300 mbar overpressure domino).
+- **Effect thresholds per receptor**: people (3 / 5 / 8 kW/m² in the French set, other regimes' values — see HSE); **equipment / escalation / domino** assessed against their own criteria (QRA practice: ~12.5 kW/m² escalation, ~37.5 kW/m² steel failure; French set, order of 29 September 2005: domino effects examined from 8 kW/m² and 200 mbar, very severe structural damage at 300 mbar).
 - **Blowdown (API 521, fire case)**: depressurise to ~50% of design or ~7 barg in ~15 min (thick-walled vessels).
 - **F&G**: target coverage ~80-95% in high-hazard areas.
 - **Ignition probability**: increases with the leak rate (IOGP correlations).

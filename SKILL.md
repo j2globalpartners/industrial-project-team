@@ -1,6 +1,6 @@
 ---
 name: industrial-project-team
-description: "Voices one member or the whole team of an industrial project, WHATEVER THE SECTOR (project manager, estimator, cost controller, planner, contract manager, risk manager, financing/FID, process/mechanical/materials/piping/civil/geotechnical/electrical/instrumentation/DCS engineers, HSE, technical safety, permitting, procurement, construction, quality, commissioning, O&M, grid connection, interfaces, document control) and CREATES ON DEMAND the specifics of a sector — a sector profile (identity card, per-role inserts, country notes) and specialist roles — without shipping any; MULTI-COUNTRY layer (FR, BE, PL, ES, DE, extensible). Trigger for a role's opinion, a meeting (kick-off, gate, HAZOP, steerco), a deliverable (schedule, P&ID, change order, EOT, financial model), the critique of a document (EAC, P6, geotech, permit, OEM offer), a team simulation, EPC vocabulary (FID, FEED, FIDIC, LD, ATEX, Seveso, DSCR, MC/PAC); and for 'create the profile for sector X', 'add role Y', 'add country Z', 'pin this project'."
+description: "Voices one member or the whole team of an industrial project, WHATEVER THE SECTOR (project manager, estimator, cost controller, planner, contract manager, risk manager, financing/FID, process/mechanical/materials/piping/civil/geotechnical/electrical/instrumentation/DCS engineers, HSE, technical safety, permitting, procurement, construction, quality, commissioning, O&M, grid connection, interfaces, document control, insurance, site & stakeholders, supply & offtake) and CREATES ON DEMAND the specifics of a sector — a sector profile (identity card, per-role inserts, country notes) and specialist roles — without shipping any; MULTI-COUNTRY layer (FR, BE, PL, ES, DE…). Trigger for a role opinion, a meeting (gate, HAZOP, steerco), a deliverable (schedule, P&ID, change order, financial model), a document critique (EAC, P6, geotech, permit, OEM offer), a team simulation, EPC vocabulary (FID, FIDIC, LD, ATEX, DSCR, MC/PAC); and for 'create the profile for sector X', 'add role Y', 'add country Z', 'pin this project'."
 ---
 
 # Industrial project team — generic engine, multi-sector, multi-country
@@ -9,7 +9,7 @@ This skill makes the trades of an industrial project speak with the vocabulary, 
 
 | Layer | Where | What it carries | Shipped |
 |---|---|---|---|
-| **Generic roles** | `references/roles/` — 27 sheets | The trade, independent of the sector: reading grids, anchors, decision trees, red flags, senior level. | Yes |
+| **Generic roles** | `references/roles/` — 30 sheets | The trade, independent of the sector: reading grids, anchors, decision trees, red flags, senior level. | Yes |
 | **Sector profile** | `references/sectors/<slug>.md` | What changes *for each role* in a sector: identity card, per-role inserts, **sector-specific roles**, country × sector notes. | Only `generic` (fallback) + the template. **Every sector is created** (§ "Creating the specifics of a sector"). |
 | **Countries** | `references/countries/` | What changes once the project country is defined, for any sector: nine axes, **technical standards regimes worldwide** (which codes apply), country cards, substance risk. | Regime map covering the major regimes + 5 example cards (FR · BE · PL · ES · DE) + the template |
 
@@ -58,7 +58,7 @@ Every sheet `references/roles/*.md` follows the same structure — this is where
 
 The sector profile adds, for each role, an **insert** of 3 to 10 bullets (structuring cost items, long-lead items, dominant hazards, references, milestones, red flags and senior eye specific to the sector) and, where relevant, **sector-specific roles** — typically the **process-core specialist**, whom the generic sheets designate under that name without defining.
 
-## Role catalogue (27 generic + sector-specific roles created on demand)
+## Role catalogue (30 generic + sector-specific roles created on demand)
 
 The titles in the first column are the **matching key** with the `###` of the profiles: keep them identical when adding a role or a profile (`scripts/team.py check` verifies it).
 
@@ -72,6 +72,7 @@ The titles in the first column are the **matching key** with the `###` of the pr
 | Contract manager | Client contract, claims, EOT, LD, FIDIC, variations, bonds | `references/roles/contract-manager.md` |
 | Risk manager | Register, P×I matrix, Monte Carlo (QCRA/QSRA), contingency, draw-down | `references/roles/risk-manager.md` |
 | Financing & FID | Financial model, DSCR, bankability, conditions precedent, closing | `references/roles/financing-fid.md` |
+| Project insurance | Construction and operation insurance programme, exclusions, testing period, delay in start-up cover, claims | `references/roles/insurance.md` |
 
 #### Engineering
 | Role | When to call on it | Sheet |
@@ -108,6 +109,8 @@ The titles in the first column are the **matching key** with the `###` of the pr
 | Grid & utility connection | Firm/flexible capacity, connection agreement, gas/electricity/heat/H₂/water operators — export and supply | `references/roles/grid-connection.md` |
 | Interface manager | Interface register, battery limits, gaps/overlaps, multi-contract/packages | `references/roles/interface-manager.md` |
 | Document control | Numbering, transmittals, MDR, IFR/IFA/IFC/AB statuses, as-built, final dossier | `references/roles/document-control.md` |
+| Site & stakeholder engagement | Site selection and land control, easements, stakeholder mapping, consultation, risk of third-party appeal | `references/roles/site-stakeholders.md` |
+| Supply & offtake | Feedstock, energy and sales contracts over the asset life, contracted share, indexation, counterparty concentration | `references/roles/supply-offtake.md` |
 
 #### Sector-specific roles (created on demand)
 | Role | When to call on it | Sheet |
@@ -119,6 +122,7 @@ The titles in the first column are the **matching key** with the `###` of the pr
 |---|---|---|
 | Multi-country (method, nine axes, substance) | **As soon as a project is not in the base country** | `references/countries/multi-country.md` |
 | Country cards (FR · BE · PL · ES · DE) | With the previous one, for the country concerned | `references/countries/country-cards.md` |
+| Documentary sources (five files: `project-controls.md`, `engineering.md`, `safety-environment.md`, `delivery-operations.md`, `external-sectors.md`) | To trace an anchor or a rule back to its document. Each fact carries its confirmation level: **[V]** was read in the document itself; the others were only located through a search engine — **re-read at source before quoting in a deliverable** | `references/sources/` |
 
 ## How to answer
 
@@ -242,9 +246,10 @@ Invariants (this is what `check` tests): role sheets code-agnostic (standards qu
 ## Skill files
 
 - `SKILL.md` — this file: profile selection, role catalogue (source of truth for the titles), answer protocol, sector creation, modification guide.
-- `references/roles/` — **27 generic sheets** + `_template-role.md`. All follow the anatomy described above; none contains sector content.
+- `references/roles/` — **30 generic sheets** + `_template-role.md`. All follow the anatomy described above; none contains sector content.
 - `references/sectors/` — `generic.md` (fallback + express mini-profile) and `_template-sector.md` (template with a density example). Created profiles are added here.
 - `references/countries/` — `multi-country.md` (method), `standards-regimes.md` (technical standards by regime and discipline, worldwide), `country-cards.md` (FR · BE · PL · ES · DE as examples), `_template-country.md`.
+- `references/sources/` — documentary sources behind the sheets, by family of roles: `project-controls.md`, `engineering.md`, `safety-environment.md`, `delivery-operations.md`, `external-sectors.md`. Each fact is tagged with its confirmation level ([V] = read in the document itself; the others only located through a search engine): a lead to the source, never a substitute for re-reading it before quoting in a deliverable. Unreviewed by practitioners.
 - `config/` — `project.json` (installation default) and `schema.md` (fields, priorities, examples).
 - `examples/` — `sample-answers.md` (illustrations of the expected output) and `sectors/`, five example profiles (unreviewed, not loaded by the skill): a starting point to copy into `references/sectors/` and review, never a source to answer from.
 - `scripts/team.py` — `list`, `profile`, `check`, `init`, `new-sector`, `new-role [--sector-specific]`, `new-country`; no dependency, no network access.

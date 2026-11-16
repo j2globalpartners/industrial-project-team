@@ -39,7 +39,7 @@ Filter applied to any contract or amendment received, in order. **First rule: on
 - **Force majeure / Exceptional Event**: scope and nature of the relief (time only, or time **+** money?). **Change in Law**: covered?
 
 ### Step 4 — Protection mechanisms and procedure
-- **Time-bar clauses**: list **every** clause with a time limit. Claim notification: **28 days** (FIDIC 20.2.1). Is the time limit a **condition precedent** (forfeiture if missed) or indicative? This is the killer question.
+- **Time-bar clauses**: list **every** clause with a time limit. Claim notification: **28 days** (FIDIC 20.2.1) — in the 2017 edition the Notice of Claim period binds **both Parties**, the fully detailed Claim follows within **84 days** (42 in the 1999 edition), and the Engineer must give notice within **14 days** if he considers the Notice of Claim late. Is the time limit a **condition precedent** (forfeiture if missed) or indicative? This is the killer question.
 - **Variation and valuation mechanism** (BoQ rates, dayworks, negotiated lump sum, cost + fee).
 - **Dispute resolution ladder**: Engineer's determination → DAAB → amicable settlement (56 days) → arbitration. Seat, rules (ICC/LCIA/SIAC), language.
 - **Termination**: for cause (notice + cure period) **and** for convenience (compensation formula). Look for **asymmetry** (the client can terminate easily, we cannot?).
@@ -58,7 +58,9 @@ Sanity-check reference points — always check the actual values in the contract
 | Performance LDs | separate cap, often 10–15% |
 | Overall cap on liability | ~100% of the contract price |
 | DNP / defects period | 12–24 months (24 typical for a plant) |
-| Claim notification time-bar | 28 days (FIDIC) — check amendments (sometimes 7–14) |
+| Claim notification time-bar | 28 days (FIDIC; both Parties in the 2017 edition) — check amendments (sometimes 7–14) |
+| Fully detailed Claim | 84 days (FIDIC 2017) — 42 days in the 1999 edition |
+| Engineer's notice that a Notice of Claim is late | 14 days (FIDIC 2017) |
 | IPC payment period | 56 days (FIDIC) |
 | Amicable settlement before arbitration | 56 days (FIDIC) |
 
@@ -128,6 +130,10 @@ A claim only stands if all four stand. This is where 80% of claims fail — almo
 - **DNP / DLP** — 12–24 months.
 - **PC / FAC** — end of DNP, release of residual bonds.
 - **Final Statement** — final account; disagreement opens the way to disputes.
+
+## Sector-specific
+
+What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Contract manager". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
 
 ## Red flags — the hunt in a draft contract
 

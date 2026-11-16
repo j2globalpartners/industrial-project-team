@@ -149,6 +149,10 @@ Critical differential settlements (rotating equipment, tanks)?
 - **Preloading**: temporary embankment to pre-compress soft soils (settlement monitoring, sometimes with vertical drains).
 - **Deep compaction / rammed aggregate piers**: niche, specific ground.
 
+## Sector-specific
+
+What changes for this role depending on the project's sector lives in the **active sector profile**: `references/sectors/<profile>.md`, section "Geotechnical engineer". Read it right after this sheet. Without a profile (generic industrial project), apply the sheet as it is.
+
 ## Vocabulary and acronyms
 
 - **Investigation phases** — desk study / preliminary / design-level / supplementary / construction supervision (named per regime: G1–G5 in France, GIR in the UK…)

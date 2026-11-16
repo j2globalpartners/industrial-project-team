@@ -80,7 +80,7 @@ For the sizing of distances and siting, every regime sets its own thresholds; th
 | Overpressure | 50 mbar | 140 mbar | 200 mbar |
 | Toxic | concentration·duration per substance | — | — |
 
-(300 mbar = domino effects threshold.) Other regimes use different criteria: UK HSE land-use planning zones and dangerous-dose values, Dutch QRA individual-risk contours, US **API RP 752 / 753** for the siting of occupied buildings vs overpressure / fire. **Flammability**: methane LFL ~5% / UFL ~15% vol.
+In the same French set, effects on structures: **domino effects are to be examined from 8 kW/m² (thermal) and 200 mbar (overpressure)**; 300 mbar is the threshold of very severe structural damage, not the domino threshold. Other regimes use different criteria: UK HSE land-use planning zones and dangerous-dose values, Dutch QRA individual-risk contours, US **API RP 752 / 753** for the siting of occupied buildings vs overpressure / fire. **Flammability**: methane LFL ~5% / UFL ~15% vol.
 
 ## Sector-specific
 

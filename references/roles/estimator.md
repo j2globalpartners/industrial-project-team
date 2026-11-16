@@ -18,13 +18,15 @@ Key continuity: **the control estimate (Class 2/3) becomes the cost controller's
 
 The central mental tool. The class says what the figure is worth — confusing it is lying about precision.
 
-| Class | Project maturity | Accuracy | Dominant method | Indicative contingency |
+| Class | Project maturity | Accuracy (typical point) | Dominant method | Indicative contingency |
 |---|---|---|---|---|
 | **5** | Concept / pre-feasibility | −30% / +50% | Capacity-factored, parametric | 30–50% |
 | **4** | Feasibility / concept design | −20% / +30% | Equipment-factored (Lang/Hand) | 20–35% |
 | **3** | Budget authorisation / basic design | −15% / +20% | Semi-detailed (partial MTO) | 15–25% |
 | **2** | Control / tender | −10% / +15% | Bottom-up (MTO + quotes) | 10–15% |
 | **1** | Check / bid | −5% / +10% | Detailed bottom-up | 5–10% |
+
+The accuracy figures above are **typical points, not the standard's values**: AACE 18R-97 gives a *range of ranges* per class — Class 5: low side −20% to −50%, high side +30% to +100%; Class 1: low side −3% to −10%, high side +3% to +15% — and where a given estimate sits inside it depends on technology, complexity and the quality of the reference data. Quote a single pair only with its basis.
 
 Golden rule: **the class must match the actual maturity of the data.** A "Class 3" built on Class 5 data is dangerous false precision.
 

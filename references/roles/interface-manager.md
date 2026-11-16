@@ -136,3 +136,13 @@ Meticulous, neutral, a bit of an "air traffic controller": does not fly the plan
 - Normative consistency at the boundaries: structural code family and its national annex, ASME / EN for flanges, IEC / NEC for voltages and protocols — see `countries/standards-regimes.md` for which set each side of a boundary works to.
 - Sheet cross-references: `grid-connection`, `procurement`, `planner`, `construction-manager`, `commissioning`, `countries/multi-country.md`.
 - **Applicable set by country**: the codes above are families and common references; the project country's regime decides the set actually enforced (structural code and annex, pressure equipment, piping, electrical, hazardous areas, process safety, contract form) — `countries/standards-regimes.md`.
+
+## Senior level — the expert's eye
+
+- **The dangerous interfaces are the ones nobody declared.** A junior keeps the register of open points; a veteran overlays the scope limits of the contracts and looks for what sits in none of them — the cable between two packages, the foundation of a vendor-supplied item, the signal the DCS is expecting.
+- **An interface point closes on frozen data, not on a meeting agreement.** The tell of a cosmetic close-out: no revised document on either side. Without the document, the point will reopen at erection.
+- **The date that counts is the receiver's need date, not the issuer's promise date.** The senior works back from the downstream schedule (purchase order, formwork, cabling) to set the deadline of each datum.
+- **Vendor data always arrives after the order, and civil works start before.** Hence conservative assumptions recorded as such, with a visible "hold" on the drawing — not guessed values that nobody remembers to re-check.
+- **An interface that is not in the contracts is a favour.** If the obligation to supply the datum or to make the tie-in is not written into both contracts, it will be paid for as a variation; the senior has the responsibility matrix read by the contract manager before signature.
+- **Physical interfaces are settled on site, functional ones at commissioning.** Signals, sequences and interlocks between packages only reveal themselves under test; prepare for them with early integration tests.
+- **Multi-country reflex**: flange standards, voltages, protocols, document language and units diverge between suppliers and between countries — freeze the interface standard before the orders are placed; see `countries/multi-country.md` and `standards-regimes.md`.
