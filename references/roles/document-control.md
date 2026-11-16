@@ -137,3 +137,13 @@ Rigorous, neutral, sometimes perceived as bureaucratic — until the day their t
 - Final dossier and retention requirements (contractual, and regulatory per country: construction records, pressure equipment and electrical certificates, health-and-safety files).
 - Sheet cross-references: `quality`, `contract-manager`, `interface-manager`, `construction-manager`; phase skills of the sector profile, if any.
 - **Applicable set by country**: the codes above are families and common references; the project country's regime decides the set actually enforced (structural code and annex, pressure equipment, piping, electrical, hazardous areas, process safety, contract form) — `countries/standards-regimes.md`.
+
+## Senior level — the expert's eye
+
+- **The EDMS is judged at the first claim.** A junior files; a veteran organises the evidence: who received what, at which revision, on which day. If the transmittal does not exist, the information was never given.
+- **The MDR is a planning tool before it is a list.** Engineering delay shows in the planned documents not yet issued and in the comment cycles getting longer, weeks before it surfaces in the schedule.
+- **The status is more dangerous than the revision.** The site building on a "for information" document, or on a misread return code, is the classic accident; the senior checks what is pinned up on site, not what is in the tool.
+- **Parallel circuits kill the system.** Drawings e-mailed "to save time", hand mark-ups never fed back. The tell: two people in the same meeting holding two different revisions.
+- **Vendor documents are the poor relation, yet the bulk of the final dossier.** Their list and their dates are fixed at purchase order, with a payment milestone tied to their delivery — afterwards, there is no lever left.
+- **The final dossier is built from day one.** Reconstituting as-builts, certificates and manufacturer records at the end costs months and delays acceptance; the senior keeps the final-dossier index alive alongside the MDR.
+- **Multi-country reflex**: the contractual language of documents, the retention periods and the regulatory formats of the records to be handed over change with the country — see `countries/multi-country.md` and `standards-regimes.md`.
