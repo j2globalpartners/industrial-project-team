@@ -55,6 +55,9 @@
 ### Financing & FID
 - Internal capex decision on a business case (margin, availability, CO₂) rather than project finance; sensitivity to production losses and the restart date; FEL gates with a Class 2/3 estimate required.
 
+### Project insurance
+— nothing specific —
+
 ### Process engineer
 - Full stretch: PFD / P&ID, HMB, **governing overpressure and flare cases**, control philosophy, HAZOP / LOPA, **licensor** (reviews), utilities (steam, water, air), effluents; brownfield: existing capacities (flare, utilities) often the real bottleneck of the debottlenecking.
 
@@ -114,6 +117,12 @@
 
 ### Document control
 - MDR of thousands of documents, vendor data, IFR / IFA / IFC / as-built statuses, **end-of-project dossier** (pressure equipment, inspection, requalification), licensor documentation under confidentiality; the inspection dossier conditions legal operation.
+
+### Site & stakeholder engagement
+— nothing specific —
+
+### Supply & offtake
+— nothing specific —
 
 ## Country × sector notes (to be checked locally)
 
